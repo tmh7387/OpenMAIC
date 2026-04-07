@@ -6,3 +6,8 @@ env/logs/
 __pycache__/
 *.pyc
 node_modules
+
+# Next.js secrets — never commit
+.env.local
+.env
+*.env

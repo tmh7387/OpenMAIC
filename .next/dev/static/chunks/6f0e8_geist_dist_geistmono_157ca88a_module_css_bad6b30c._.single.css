@@ -1,0 +1,17 @@
+/* [project]/node_modules/.pnpm/geist@1.7.0_next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1._ad9fabae979e5898d7fd32489ae047ac/node_modules/geist/dist/geistmono_157ca88a.module.css [app-client] (css) */
+@font-face {
+  font-family: GeistMono;
+  src: url("../media/GeistMono_Variable.p.2f937313.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+.geistmono_157ca88a-module__vKYbza__className {
+  font-family: GeistMono, ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+}
+
+.geistmono_157ca88a-module__vKYbza__variable {
+  --font-geist-mono: "GeistMono", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+}
+
+/*# sourceMappingURL=6f0e8_geist_dist_geistmono_157ca88a_module_css_bad6b30c._.single.css.map*/

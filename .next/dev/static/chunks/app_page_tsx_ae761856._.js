@@ -1,0 +1,31 @@
+(globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
+    script: typeof document === "object" ? document.currentScript : undefined,
+    chunks: [
+  "static/chunks/lib_6c70ff75._.js",
+  "static/chunks/lib_cb870c8e._.js",
+  "static/chunks/components_ui_7b1f7c79._.js",
+  "static/chunks/components_settings_fe60137b._.js",
+  "static/chunks/components_generation_fbb4d4a7._.js",
+  "static/chunks/components_agent_agent-bar_tsx_9607d278._.js",
+  "static/chunks/components_slide-renderer_components_1541148d._.js",
+  "static/chunks/components_audio_speech-button_tsx_b6dceb69._.js",
+  "static/chunks/app_page_tsx_dda9881a._.js",
+  "static/chunks/configs_image-clip_ts_b6e9cae4._.js",
+  "static/chunks/c2567_motion-dom_dist_es_b9556183._.js",
+  "static/chunks/bccbc_framer-motion_dist_es_54a81d7e._.js",
+  "static/chunks/35b79_tailwind-merge_dist_bundle-mjs_mjs_8fe727c0._.js",
+  "static/chunks/2c99e_@radix-ui_react-select_dist_index_mjs_785da972._.js",
+  "static/chunks/cac4f_dexie_84559a10._.js",
+  "static/chunks/b951d_zrender_lib_f6c4ee7d._.js",
+  "static/chunks/6e80b_echarts_lib_util_762c5dc4._.js",
+  "static/chunks/6e80b_echarts_lib_model_c278a0f4._.js",
+  "static/chunks/6e80b_echarts_lib_core_318b8df8._.js",
+  "static/chunks/6e80b_echarts_lib_data_5b7080a3._.js",
+  "static/chunks/6e80b_echarts_lib_component_3b85d217._.js",
+  "static/chunks/6e80b_echarts_lib_chart_8b362f2f._.js",
+  "static/chunks/6e80b_echarts_lib_coord_857e04fd._.js",
+  "static/chunks/6e80b_echarts_lib_3339c0bc._.js",
+  "static/chunks/node_modules__pnpm_f7e2a919._.js"
+],
+    source: "dynamic"
+});

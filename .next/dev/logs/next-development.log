@@ -1,0 +1,219 @@
+[00:00:00.607] Server  LOG     ✓ Ready in 412ms
+[00:01:37.285] Server  LOG     [2026-04-07T09:06:15.221Z] [INFO] [ServerProviderConfig] [ServerProviderConfig] Loaded (server-providers.yml): 1 LLM, 0 TTS, 0 ASR, 0 PDF, 0 Image, 0 Video, 0 WebSearch providers
+[00:05:15.289] Server  ERROR   [2026-04-07T09:09:53.226Z] [ERROR] [Verify Model] Model verification failed [model="google:gemini-3.1-pro-preview"]: AI_RetryError: Failed after 3 attempts. Last error: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+Please retry in 6.751320464s.
+    at _retryWithExponentialBackoff (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2639:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4316:48)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async generateText (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4137:16)
+    at async POST (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__1457b120._.js:2094:26)
+    at async AppRouteRouteModule.do (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37866)
+    at async AppRouteRouteModule.handle (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45156)
+    at async responseGenerator (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14843:38)
+    at async AppRouteRouteModule.handleResponse (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187713)
+    at async handleResponse (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14906:32)
+    at async Module.handler (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14959:13)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1422:9)
+    at async DevServer.renderPageComponent (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1474:24)
+    at async DevServer.renderToResponseImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1524:32)
+    at async DevServer.pipeImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1018:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/next-server.js:395:17)
+    at async DevServer.handleRequestImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:909:17)
+    at async /Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:387:20
+    at async Span.traceAsyncFn (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:383:24)
+    at async invokeRender (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:248:21)
+    at async handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:447:24)
+    at async requestHandlerImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:496:13)
+    at async Server.requestListener (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/start-server.js:226:13)
+[00:12:28.280] Server  ERROR   [2026-04-07T09:17:06.220Z] [ERROR] [Verify Model] Model verification failed [model="google:Gemini 3.1 Pro Preview"]: AI_APICallError: * GenerateContentRequest.model: unexpected model name format
+
+    at /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/node_modules__pnpm_2cc317b9._.js:3149:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async postToApi (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/node_modules__pnpm_2cc317b9._.js:3022:36)
+    at async GoogleGenerativeAILanguageModel.doGenerate (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/5f27a_@ai-sdk_google_dist_index_mjs_ec4c6f36._.js:988:77)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4357:52)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async _retryWithExponentialBackoff (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2624:16)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4316:48)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async generateText (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4137:16)
+    at async POST (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__1457b120._.js:2094:26)
+    at async AppRouteRouteModule.do (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37866)
+    at async AppRouteRouteModule.handle (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45156)
+    at async responseGenerator (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14843:38)
+    at async AppRouteRouteModule.handleResponse (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187713)
+    at async handleResponse (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14906:32)
+    at async Module.handler (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14959:13)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1422:9)
+    at async DevServer.renderPageComponent (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1474:24)
+    at async DevServer.renderToResponseImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1524:32)
+    at async DevServer.pipeImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1018:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/next-server.js:395:17)
+    at async DevServer.handleRequestImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:909:17)
+    at async /Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:387:20
+    at async Span.traceAsyncFn (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:383:24)
+    at async invokeRender (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:248:21)
+    at async handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:447:24)
+    at async requestHandlerImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:496:13)
+    at async Server.requestListener (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/start-server.js:226:13)
+[00:12:32.787] Server  ERROR   [2026-04-07T09:17:10.727Z] [ERROR] [Verify Model] Model verification failed [model="google:Gemini 3.1 Pro Preview"]: AI_APICallError: * GenerateContentRequest.model: unexpected model name format
+
+    at /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/node_modules__pnpm_2cc317b9._.js:3149:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async postToApi (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/node_modules__pnpm_2cc317b9._.js:3022:36)
+    at async GoogleGenerativeAILanguageModel.doGenerate (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/5f27a_@ai-sdk_google_dist_index_mjs_ec4c6f36._.js:988:77)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4357:52)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async _retryWithExponentialBackoff (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2624:16)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4316:48)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async generateText (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4137:16)
+    at async POST (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__1457b120._.js:2094:26)
+    at async AppRouteRouteModule.do (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37866)
+    at async AppRouteRouteModule.handle (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45156)
+    at async responseGenerator (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14843:38)
+    at async AppRouteRouteModule.handleResponse (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187713)
+    at async handleResponse (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14906:32)
+    at async Module.handler (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14959:13)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1422:9)
+    at async DevServer.renderPageComponent (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1474:24)
+    at async DevServer.renderToResponseImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1524:32)
+    at async DevServer.pipeImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1018:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/next-server.js:395:17)
+    at async DevServer.handleRequestImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:909:17)
+    at async /Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:387:20
+    at async Span.traceAsyncFn (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:383:24)
+    at async invokeRender (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:248:21)
+    at async handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:447:24)
+    at async requestHandlerImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:496:13)
+    at async Server.requestListener (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/start-server.js:226:13)
+[00:17:52.869] Server  ERROR   [2026-04-07T09:22:30.810Z] [ERROR] [Verify Model] Model verification failed [model="google:Gemini 3.1 Pro Preview"]: AI_APICallError: * GenerateContentRequest.model: unexpected model name format
+
+    at /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/node_modules__pnpm_2cc317b9._.js:3149:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async postToApi (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/node_modules__pnpm_2cc317b9._.js:3022:36)
+    at async GoogleGenerativeAILanguageModel.doGenerate (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/5f27a_@ai-sdk_google_dist_index_mjs_ec4c6f36._.js:988:77)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4357:52)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async _retryWithExponentialBackoff (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2624:16)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4316:48)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async generateText (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4137:16)
+    at async POST (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__1457b120._.js:2094:26)
+    at async AppRouteRouteModule.do (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37866)
+    at async AppRouteRouteModule.handle (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45156)
+    at async responseGenerator (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14843:38)
+    at async AppRouteRouteModule.handleResponse (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187713)
+    at async handleResponse (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14906:32)
+    at async Module.handler (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14959:13)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1422:9)
+    at async DevServer.renderPageComponent (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1474:24)
+    at async DevServer.renderToResponseImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1524:32)
+    at async DevServer.pipeImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1018:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/next-server.js:395:17)
+    at async DevServer.handleRequestImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:909:17)
+    at async /Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:387:20
+    at async Span.traceAsyncFn (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:383:24)
+    at async invokeRender (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:248:21)
+    at async handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:447:24)
+    at async requestHandlerImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:496:13)
+    at async Server.requestListener (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/start-server.js:226:13)
+[00:18:00.674] Server  ERROR   [2026-04-07T09:22:38.616Z] [ERROR] [Verify Model] Model verification failed [model="google:Gemini 3.1 Pro Preview"]: AI_APICallError: * GenerateContentRequest.model: unexpected model name format
+
+    at /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/node_modules__pnpm_2cc317b9._.js:3149:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async postToApi (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/node_modules__pnpm_2cc317b9._.js:3022:36)
+    at async GoogleGenerativeAILanguageModel.doGenerate (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/5f27a_@ai-sdk_google_dist_index_mjs_ec4c6f36._.js:988:77)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4357:52)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async _retryWithExponentialBackoff (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2624:16)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4316:48)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async generateText (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4137:16)
+    at async POST (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__1457b120._.js:2094:26)
+    at async AppRouteRouteModule.do (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37866)
+    at async AppRouteRouteModule.handle (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45156)
+    at async responseGenerator (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14843:38)
+    at async AppRouteRouteModule.handleResponse (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187713)
+    at async handleResponse (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14906:32)
+    at async Module.handler (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_5dcd9fd8._.js:14959:13)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1422:9)
+    at async DevServer.renderPageComponent (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1474:24)
+    at async DevServer.renderToResponseImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1524:32)
+    at async DevServer.pipeImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1018:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/next-server.js:395:17)
+    at async DevServer.handleRequestImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:909:17)
+    at async /Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:387:20
+    at async Span.traceAsyncFn (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:383:24)
+    at async invokeRender (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:248:21)
+    at async handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:447:24)
+    at async requestHandlerImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:496:13)
+    at async Server.requestListener (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/start-server.js:226:13)
+[00:19:12.568] Server  LOG     [2026-04-07T09:23:50.511Z] [INFO] [Agent Profiles API] Generating agent profiles for "I want to learn how to use SeeDance 2.0" [model=google:gemini-3.1-pro-preview]
+[00:19:12.571] Browser LOG     [2026-04-07T09:23:50.412Z] [INFO] [ImageStorage] Cleaned up images older than 24 hours
+[00:19:12.571] Browser LOG     [2026-04-07T09:23:50.413Z] [INFO] [ImageStorage] Cleaned up images older than 24 hours
+[00:19:27.496] Server  LOG     [2026-04-07T09:24:05.439Z] [INFO] [Agent Profiles API] Successfully generated 4 agent profiles for "I want to learn how to use SeeDance 2.0"
+[00:19:30.251] Server  LOG     [2026-04-07T09:24:08.194Z] [INFO] [Outlines Stream] Generating outlines: "I want to learn how to use SeeDance 2.0" [model=google:gemini-3.1-pro-preview]
+[00:20:10.621] Server  LOG     [2026-04-07T09:24:48.565Z] [INFO] [Scene Content API] Generating content: "Welcome to SeeDance 2.0" (slide) [model=google:gemini-3.1-pro-preview]
+[00:20:11.109] Browser LOG     [2026-04-07T09:24:48.950Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:28:36.531] Server  LOG     [2026-04-07T09:33:14.474Z] [INFO] [Scene Content API] Content generated successfully: "Welcome to SeeDance 2.0"
+[00:28:36.631] Server  LOG     [2026-04-07T09:33:14.574Z] [INFO] [Scene Actions API] Generating actions: "Welcome to SeeDance 2.0" (slide) [model=google:gemini-3.1-pro-preview]
+[00:28:49.434] Server  LOG     [2026-04-07T09:33:27.376Z] [INFO] [Scene Actions API] Generated 9 actions for: "Welcome to SeeDance 2.0"
+[00:28:49.434] Server  LOG     [2026-04-07T09:33:27.377Z] [INFO] [Scene Actions API] Scene assembled successfully: "Welcome to SeeDance 2.0" — 9 actions
+[00:28:49.542] Browser LOG     [2026-04-07T09:33:27.384Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:28:50.043] Browser LOG     [2026-04-07T09:33:27.884Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:28:51.141] Server  LOG     [2026-04-07T09:33:29.084Z] [INFO] [Scene Content API] Generating content: "Deconstructing the Interface" (slide) [model=google:gemini-3.1-pro-preview]
+[00:28:51.206] Browser LOG     [2026-04-07T09:33:29.046Z] [INFO] [StageStore] Stage already loaded in memory, skipping IndexedDB load: 3WRcjy6OyL
+[00:28:51.206] Browser LOG     [2026-04-07T09:33:29.046Z] [INFO] [StageStore] Stage already loaded in memory, skipping IndexedDB load: 3WRcjy6OyL
+[00:28:51.739] Browser LOG     [2026-04-07T09:33:29.580Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:37:58.039] Browser LOG     [2026-04-07T09:42:35.883Z] [INFO] [ChatSessions] [ChatArea] Created lecture session: session-1775554955883-yc587dbilc for scene nxaLiA04-cI6D-vNUxlLl
+[00:38:05.033] Browser LOG     [2026-04-07T09:42:42.878Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:38:16.748] Browser LOG     [2026-04-07T09:42:54.592Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:38:27.380] Browser LOG     [2026-04-07T09:43:05.224Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:38:37.187] Browser LOG     [2026-04-07T09:43:15.032Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:38:45.776] Browser LOG     [2026-04-07T09:43:23.620Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:38:53.159] Browser LOG     [2026-04-07T09:43:31.003Z] [INFO] [ChatSessions] [ChatArea] Ending session: session-1775554955883-yc587dbilc
+[00:38:53.678] Browser LOG     [2026-04-07T09:43:31.522Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:38:57.300] Browser LOG     [2026-04-07T09:43:35.145Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:39:01.191] Browser LOG     [2026-04-07T09:43:39.036Z] [INFO] [StageStorage] Saved stage: 3WRcjy6OyL
+[00:44:00.792] Server  ERROR   [2026-04-07T09:48:38.741Z] [ERROR] [Scene Content API] Scene content generation failed [scene="Deconstructing the Interface", model=google:gemini-3.1-pro-preview]: AI_RetryError: Failed after 3 attempts. Last error: Cannot connect to API: Headers Timeout Error
+    at _retryWithExponentialBackoff (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2639:19)
+    at async fn (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4316:48)
+    at async /Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:2366:28
+    at async generateText (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/d8dce_ai_dist_index_mjs_516ae3a7._.js:4137:16)
+    at async callLLM (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__60825dd8._.js:1877:28)
+    at async aiCall (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__01da7992._.js:8256:28)
+    at async generateSlideContent (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__b2f7dced._.js:6676:22)
+    at async POST (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/[root-of-the-server]__01da7992._.js:8278:25)
+    at async AppRouteRouteModule.do (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:37866)
+    at async AppRouteRouteModule.handle (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45156)
+    at async responseGenerator (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_8f2615a7._.js:14843:38)
+    at async AppRouteRouteModule.handleResponse (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187713)
+    at async handleResponse (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_8f2615a7._.js:14906:32)
+    at async Module.handler (/Users/macminim4/Projects/OpenMAIC/.next/dev/server/chunks/109d2_next_8f2615a7._.js:14959:13)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1422:9)
+    at async DevServer.renderPageComponent (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1474:24)
+    at async DevServer.renderToResponseImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1524:32)
+    at async DevServer.pipeImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:1018:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/next-server.js:395:17)
+    at async DevServer.handleRequestImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/base-server.js:909:17)
+    at async /Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:387:20
+    at async Span.traceAsyncFn (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/dev/next-dev-server.js:383:24)
+    at async invokeRender (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:248:21)
+    at async handleRequest (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:447:24)
+    at async requestHandlerImpl (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/router-server.js:496:13)
+    at async Server.requestListener (/Users/macminim4/Projects/OpenMAIC/node_modules/.pnpm/next@16.1.2_@babel+core@7.29.0_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_73d26e8a224c7af85a4dde0601bbbcd7/node_modules/next/dist/server/lib/start-server.js:226:13)
+[00:44:54.865] Server  LOG     [2026-04-07T09:49:32.815Z] [INFO] [Scene Content API] Generating content: "Deconstructing the Interface" (slide) [model=google:gemini-3.1-pro-preview]
+[00:46:41.100] Server  LOG       Reload env: .env.local
+[00:46:49.488] Server  LOG       Reload env: .env.local

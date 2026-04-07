@@ -1,0 +1,13 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/chat/route.js")
+R.c("server/chunks/[root-of-the-server]__0d4a22d5._.js")
+R.c("server/chunks/_b7eb4493._.js")
+R.c("server/chunks/lib_server_provider-config_ts_1d525828._.js")
+R.c("server/chunks/[root-of-the-server]__7cd25b9d._.js")
+R.c("server/chunks/node_modules__pnpm_8812bde3._.js")
+R.c("server/chunks/node_modules__pnpm_9e758441._.js")
+R.c("server/chunks/node_modules__pnpm_1fc6a1a0._.js")
+R.c("server/chunks/_0a8482bd._.js")
+R.c("server/chunks/[root-of-the-server]__3d199820._.js")
+R.c("server/chunks/_next-internal_server_app_api_chat_route_actions_ac0c75e3.js")
+R.m(101771)
+module.exports=R.m(101771).exports

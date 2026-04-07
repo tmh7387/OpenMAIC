@@ -1,0 +1,11 @@
+{
+  "/api/generate/agent-profiles/route": "app/api/generate/agent-profiles/route.js",
+  "/api/generate/scene-actions/route": "app/api/generate/scene-actions/route.js",
+  "/api/generate/scene-content/route": "app/api/generate/scene-content/route.js",
+  "/api/generate/scene-outlines-stream/route": "app/api/generate/scene-outlines-stream/route.js",
+  "/api/server-providers/route": "app/api/server-providers/route.js",
+  "/api/verify-model/route": "app/api/verify-model/route.js",
+  "/classroom/[id]/page": "app/classroom/[id]/page.js",
+  "/generation-preview/page": "app/generation-preview/page.js",
+  "/page": "app/page.js"
+}

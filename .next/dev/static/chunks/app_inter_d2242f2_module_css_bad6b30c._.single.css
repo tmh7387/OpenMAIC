@@ -1,0 +1,26 @@
+/* [project]/app/inter_d2242f2.module.css [app-client] (css) */
+@font-face {
+  font-family: inter;
+  src: url("../media/inter_latin_wght_normal-s.p.c757f81b.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: inter Fallback;
+  src: local(Arial);
+  ascent-override: 89.79%;
+  descent-override: 22.36%;
+  line-gap-override: 0.0%;
+  size-adjust: 107.89%;
+}
+
+.inter_d2242f2-module__5SZiWG__className {
+  font-family: inter, inter Fallback;
+}
+
+.inter_d2242f2-module__5SZiWG__variable {
+  --font-sans: "inter", "inter Fallback";
+}
+
+/*# sourceMappingURL=app_inter_d2242f2_module_css_bad6b30c._.single.css.map*/

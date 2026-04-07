@@ -351,13 +351,18 @@ export async function generateClassroom(
     const safeOutline = applyOutlineFallbacks(outline, true);
     const progressStart = 30 + Math.floor((index / Math.max(outlines.length, 1)) * 60);
 
-    await options.onProgress?.({
+    // Initial progress update without blocking
+    options.onProgress?.({
       step: 'generating_scenes',
       progress: Math.max(progressStart, 31),
       message: `Generating scene ${index + 1}/${outlines.length}: ${safeOutline.title}`,
       scenesGenerated: generatedScenes,
       totalScenes: outlines.length,
-    });
+    }).catch((e) => log.warn('Progress update failed:', e));
+  }
+
+  const generatePromises = outlines.map(async (outline, index) => {
+    const safeOutline = applyOutlineFallbacks(outline, true);
 
     const content = await generateSceneContent(
       safeOutline,
@@ -371,27 +376,42 @@ export async function generateClassroom(
     );
     if (!content) {
       log.warn(`Skipping scene "${safeOutline.title}" — content generation failed`);
-      continue;
+      return null;
     }
 
     const actions = await generateSceneActions(safeOutline, content, aiCall, undefined, agents);
+    return { index, safeOutline, content, actions };
+  });
+
+  const results = await Promise.all(
+    generatePromises.map(async (p) => {
+      const res = await p;
+      if (res) {
+        generatedScenes += 1;
+        const progressEnd = 30 + Math.floor((generatedScenes / Math.max(outlines.length, 1)) * 60);
+        await options.onProgress?.({
+          step: 'generating_scenes',
+          progress: Math.min(progressEnd, 90),
+          message: `Generated ${generatedScenes}/${outlines.length} scenes`,
+          scenesGenerated: generatedScenes,
+          totalScenes: outlines.length,
+        });
+      }
+      return res;
+    })
+  );
+
+  const validResults = results.filter((r) => r !== null).sort((a, b) => (a?.index ?? 0) - (b?.index ?? 0));
+
+  for (const res of validResults) {
+    if (!res) continue;
+    const { safeOutline, content, actions } = res;
     log.info(`Scene "${safeOutline.title}": ${actions.length} actions`);
 
     const sceneId = createSceneWithActions(safeOutline, content, actions, api);
     if (!sceneId) {
       log.warn(`Skipping scene "${safeOutline.title}" — scene creation failed`);
-      continue;
     }
-
-    generatedScenes += 1;
-    const progressEnd = 30 + Math.floor(((index + 1) / Math.max(outlines.length, 1)) * 60);
-    await options.onProgress?.({
-      step: 'generating_scenes',
-      progress: Math.min(progressEnd, 90),
-      message: `Generated ${generatedScenes}/${outlines.length} scenes`,
-      scenesGenerated: generatedScenes,
-      totalScenes: outlines.length,
-    });
   }
 
   const scenes = store.getState().scenes;
